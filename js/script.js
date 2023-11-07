@@ -160,22 +160,22 @@
 // }
 
 
-const hamburger = 3;
-const fries = 3;
-const cola = 0;
-const nuggets = 2;
+// const hamburger = 3;
+// const fries = 3;
+// const cola = 0;
+// const nuggets = 2;
 
 
-if (hamburger === 3 && cola === 2 || fries === 3 && nuggets) {
-    console.log("All is happy");
-} else {
-    console.log("My valim");
-}
+// if (hamburger === 3 && cola === 2 || fries === 3 && nuggets) {
+//     console.log("All is happy");
+// } else {
+//     console.log("My valim");
+// }
 
 
-let JohnReport, alexReport, samReport, mariaReport = "done";
+// let JohnReport, alexReport, samReport, mariaReport = "done";
 
-console.log(JohnReport || alexReport || samReport || mariaReport);
+// console.log(JohnReport || alexReport || samReport || mariaReport);
 
 
 
@@ -198,3 +198,121 @@ console.log(JohnReport || alexReport || samReport || mariaReport);
 //    console.log('Done!')
 // }
 
+
+// ЦИКЛЫ
+
+// let num = 50;
+
+// while (num < 55) {
+//     console.log(num);
+//     num++;
+// }
+
+// do {
+//     console.log(num);
+//     num++;
+// }
+// while (num < 55);
+
+
+// for (let i = 1; i < 10; i++) {
+//     if (i === 6) {
+//         // break;
+//         continue;
+//     }
+//     console.log(i);
+// }
+
+for (let i = 0; i < 3; i++) {
+    console.log(i);
+    for (let j = 0; j < 3; j++) {
+        console.log(j);
+    }
+}
+
+let result = "";
+const length = 7;
+
+for (let i = 1; i < length; i++) {
+
+    for (let j = 0; j < i; j++) {
+        result += "*";
+    }
+
+    result += "\n";
+}
+
+console.log(result);
+
+
+first: for (let i = 0; i < 3; i++) {
+    console.log(`First level: ${i}`);
+    for (let j = 0; j < 3; j++) {
+        console.log(`Second level: ${j}`);
+        for (let k = 0; k < 3; k++) {
+            if (k === 2) continue first; 
+            console.log(`Third level: ${k}`)
+        }
+    }
+}
+
+
+for (let i = 5; i < 11; i++) {
+    console.log(i);
+}
+
+for (let i = 20; i > 10; i--) {
+    if (i === 13) {
+        break;
+    }
+    console.log(i);
+}
+
+for (let i = 2; i <= 10; i += 2) {
+    console.log(i);
+  }
+  
+  let num = 2;
+
+  while (num < 16) {
+    num++;
+    if (num % 2 === 0) {
+        continue;
+    } else {
+      console.log(num);
+    }
+  }
+
+  let arr = [];
+
+  for (let i = 5; i <= 10; i++) {
+      arr.push(i)
+  }
+
+  console.log(arr);
+
+
+  const arrayOfNumbers = [];
+
+  for (let i = 5; i < 11; i++) {
+      arrayOfNumbers[i - 5] = i;
+  }
+
+  console.log(arrayOfNumbers);
+  return arrayOfNumbers;
+
+
+// const lines = 5;
+// let result = '';
+
+// for (let i = 0; i <= lines; i++) {
+//     for (let j = 0; j < lines - i; j++) {
+//         result += " ";
+//     }
+//     for (let j = 0; j < 2 * i + 1; j++) {
+//         result += "*";
+//     }
+//     result += "\n";
+// }
+
+// console.log(result)
