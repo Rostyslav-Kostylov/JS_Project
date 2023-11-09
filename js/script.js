@@ -1,4 +1,4 @@
-// "use strict";
+"use strict";
 
 // let number = 5;
 // const leftBorderWidth = 1;
@@ -223,83 +223,83 @@
 //     console.log(i);
 // }
 
-for (let i = 0; i < 3; i++) {
-    console.log(i);
-    for (let j = 0; j < 3; j++) {
-        console.log(j);
-    }
-}
+// for (let i = 0; i < 3; i++) {
+//     console.log(i);
+//     for (let j = 0; j < 3; j++) {
+//         console.log(j);
+//     }
+// }
 
-let result = "";
-const length = 7;
+// let result = "";
+// const length = 7;
 
-for (let i = 1; i < length; i++) {
+// for (let i = 1; i < length; i++) {
 
-    for (let j = 0; j < i; j++) {
-        result += "*";
-    }
+//     for (let j = 0; j < i; j++) {
+//         result += "*";
+//     }
 
-    result += "\n";
-}
+//     result += "\n";
+// }
 
-console.log(result);
-
-
-first: for (let i = 0; i < 3; i++) {
-    console.log(`First level: ${i}`);
-    for (let j = 0; j < 3; j++) {
-        console.log(`Second level: ${j}`);
-        for (let k = 0; k < 3; k++) {
-            if (k === 2) continue first; 
-            console.log(`Third level: ${k}`)
-        }
-    }
-}
+// console.log(result);
 
 
-for (let i = 5; i < 11; i++) {
-    console.log(i);
-}
+// first: for (let i = 0; i < 3; i++) {
+//     console.log(`First level: ${i}`);
+//     for (let j = 0; j < 3; j++) {
+//         console.log(`Second level: ${j}`);
+//         for (let k = 0; k < 3; k++) {
+//             if (k === 2) continue first; 
+//             console.log(`Third level: ${k}`)
+//         }
+//     }
+// }
 
-for (let i = 20; i > 10; i--) {
-    if (i === 13) {
-        break;
-    }
-    console.log(i);
-}
 
-for (let i = 2; i <= 10; i += 2) {
-    console.log(i);
-  }
+// for (let i = 5; i < 11; i++) {
+//     console.log(i);
+// }
+
+// for (let i = 20; i > 10; i--) {
+//     if (i === 13) {
+//         break;
+//     }
+//     console.log(i);
+// }
+
+// for (let i = 2; i <= 10; i += 2) {
+//     console.log(i);
+//   }
   
-  let num = 2;
+//   let num = 2;
 
-  while (num < 16) {
-    num++;
-    if (num % 2 === 0) {
-        continue;
-    } else {
-      console.log(num);
-    }
-  }
+//   while (num < 16) {
+//     num++;
+//     if (num % 2 === 0) {
+//         continue;
+//     } else {
+//       console.log(num);
+//     }
+//   }
 
-  let arr = [];
+//   let arr = [];
 
-  for (let i = 5; i <= 10; i++) {
-      arr.push(i)
-  }
+//   for (let i = 5; i <= 10; i++) {
+//       arr.push(i)
+//   }
 
-  console.log(arr);
+//   console.log(arr);
 
 
-  const arrayOfNumbers = [];
+//   const arrayOfNumbers = [];
 
-  for (let i = 5; i < 11; i++) {
-      arrayOfNumbers[i - 5] = i;
-  }
+//   for (let i = 5; i < 11; i++) {
+//       arrayOfNumbers[i - 5] = i;
+//   }
 
-  console.log(arrayOfNumbers);
-  return arrayOfNumbers;
+//   console.log(arrayOfNumbers);
+//   return arrayOfNumbers;
 
 
 // const lines = 5;
@@ -316,3 +316,165 @@ for (let i = 2; i <= 10; i += 2) {
 // }
 
 // console.log(result)
+
+
+/* Задание на урок:
+
+1) Автоматизировать вопросы пользователю про фильмы при помощи цикла
+
+2) Сделать так, чтобы пользователь не мог оставить ответ в виде пустой строки,
+отменить ответ или ввести название фильма длинее, чем 50 символов. Если это происходит - 
+возвращаем пользователя к вопросам опять
+
+3) При помощи условий проверить  personalMovieDB.count, и если он меньше 10 - вывести сообщение
+"Просмотрено довольно мало фильмов", если от 10 до 30 - "Вы классический зритель", а если больше - 
+"Вы киноман". А если не подошло ни к одному варианту - "Произошла ошибка"
+
+4) Потренироваться и переписать цикл еще двумя способами*/
+
+
+// Код возьмите из предыдущего домашнего задания
+
+// const numberOfFilms = +prompt("Сколько фильмов вы уже посмотрели?", "");
+// const personalMovieDB = {
+//     count: numberOfFilms,
+//     movies: {},
+//     actors: {},
+//     genres: [],
+//     privat: false
+// };
+
+// for (let i = 0; i < 2; i++) {
+//     const a = prompt("Один из последних просмотренных фильмов?", ""),
+//           b = prompt("На сколько оцениваете его?", "");
+
+//     if(a != null && b != null && a != "" && b != "" && a.length < 50) {
+//         personalMovieDB.movies[a] = b;
+//         console.log("done");
+//     } else {
+//         console.log("error");
+//         i--;
+//     }
+// }
+
+
+// let i = 0;
+// while (i < 2) {
+//     const a = prompt("Один из последних просмотренных фильмов?", "");
+//     const b = prompt("На сколько оцениваете его?", "");
+
+//     if (a !== null && b !== null && a !== "" && b !== "" && a.length < 50) {
+//         personalMovieDB.movies[a] = b;
+//         console.log("done");
+//         i++;
+//     } else {
+//         console.log("error");
+//     }
+// }
+
+
+
+// let i = 0;
+// do {
+//     const a = prompt("Один из последних просмотренных фильмов?", "");
+//     const b = prompt("На сколько оцениваете его?", "");
+
+//     if (a !== null && b !== null && a !== "" && b !== "" && a.length < 50) {
+//         personalMovieDB.movies[a] = b;
+//         console.log("done");
+//         i++;
+//     } else {
+//         console.log("error");
+//     }
+// } while (i < 2);
+
+
+
+// if (personalMovieDB.count < 10) {
+//     console.log("Просмотрено довольно мало фильмов");
+// } else if (personalMovieDB.count >= 10 && personalMovieDB.count < 30) {
+//     console.log("Вы классический зритель");
+// } else if (personalMovieDB.count >= 30) {
+//     console.log("Вы киноман");
+// } else {
+//     console.log("Произошла ошибка");
+// }
+
+// console.log(personalMovieDB);
+
+
+// ФУНКЦИИ
+
+let num = 20;
+
+function showFirstMessege(text) {
+    console.log(text);
+    let num = 10;
+}
+
+showFirstMessege("Hi");
+console.log(num);
+
+
+// console.log(calc(4, 3));
+// console.log(calc(5, 6));
+// console.log(calc(10, 6));
+
+// function calc(a, b) {
+//     return (a + b);
+// }
+
+function ret() {
+    let num = 50;
+    return num;
+}
+
+const anotherNum = ret();
+console.log(anotherNum);
+
+
+const logger = function() {
+    console.log("Hi");
+};
+
+logger();
+
+
+// const calc = (a, b) => a + b;
+
+
+const calc = (a, b) => {
+    console.log("1");
+    return a + b;
+}
+
+
+
+// ДОМАШКА
+
+
+// // Место для первой задачи
+// function sayHello(name) {
+//     return "Привет, " + name + "!";
+// }
+
+
+// // Место для второй задачи
+// function returnNeighboringNumbers(number) {
+//     return [number - 1, number, number + 1];
+// }
+
+// // Место для третьей задачи
+// function getMathResult(base, repeat) {
+//     if (typeof repeat !== 'number' || repeat <= 0) {
+//         return base;
+//     }
+
+//     let result = [];
+//     for (let i = 0; i < repeat; i++) {
+//         result.push(base + i * base);
+//     }
+
+//     return result.join('---');
+// }
+
